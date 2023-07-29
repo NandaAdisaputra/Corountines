@@ -10,7 +10,7 @@ import kotlinx.coroutines.flow.Flow
 interface HobbyDao {
     /*untuk menyimpan data*/
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insert(users: Hobby)
+    suspend fun insert(hobby: Hobby)
 
     /*untuk mengambil data*/
     @Query("SELECT * FROM hobby ORDER BY id DESC")
